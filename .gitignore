@@ -1,0 +1,8 @@
+# Ignore Directories
+[Bb]uild/
+[Dd]ata/
+.vscode/
+
+# Ignore Files
+*.spv
+*.log
