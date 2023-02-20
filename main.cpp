@@ -9,14 +9,13 @@
 
 int main(int argc, char **args)
 {
-    //if (!glfwInit())
-    //    return -1;
-
-    assert(glfwInit() && "Initialization GLFW failed");
+    if (!glfwInit())
+        return -1;
 
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
     GLFWwindow *window = glfwCreateWindow(800, 600, "Opty", nullptr, nullptr);
-    assert(window && "Window or OpenGL context creation failed");
+    if(!window)
+        return -2;
 
     while (!glfwWindowShouldClose(window))
     {
